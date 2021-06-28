@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40037F1C-F6EA-41C5-96D0-5D1FB17E611C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Blood_Bank_Management_System</RootNamespace>
+    <AssemblyName>Blood_Bank_Management_System</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XanderUI">
+      <HintPath>..\..\..\..\soft\BBMS ICON\csharpui.comXanderUI_DLL\XanderUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blood_Bank_Management_System_DBDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Blood_Bank_Management_System_DBDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Blood_Bank_Management_System_DBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Blood_Bank_Management_System_DBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Blood_Bank_Management_System_DBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReports\crpt_Donor_Datewise_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpt_Donor_Datewise_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReports\crpt_Hospital_Datewise_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpt_Hospital_Datewise_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReports\crpt_hospital_single_bill_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpt_hospital_single_bill_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReports\crpt_Recipient_Datewise_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpt_Recipient_Datewise_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReports\crpt_Recipient_single_id_bill_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpt_Recipient_single_id_bill_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_splash_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_splash_form.Designer.cs">
+      <DependentUpon>frm_splash_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Datasets\ds_donor_list.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_donor_list.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Datasets\ds_hospital_List.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_hospital_List.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Datasets\ds_Hospital_single_bill.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Hospital_single_bill.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Datasets\ds_Recipient_List.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Recipient_List.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Add_New_Donor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Add_New_Donor.Designer.cs">
+      <DependentUpon>frm_Add_New_Donor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Add_New_Hospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Add_New_Hospital.Designer.cs">
+      <DependentUpon>frm_Add_New_Hospital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Add_New_Recipient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Add_New_Recipient.Designer.cs">
+      <DependentUpon>frm_Add_New_Recipient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_All_Donor_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_All_Donor_List.Designer.cs">
+      <DependentUpon>frm_All_Donor_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_All_Hospital_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_All_Hospital_List.Designer.cs">
+      <DependentUpon>frm_All_Hospital_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_All_Recipient_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_All_Recipient_List.Designer.cs">
+      <DependentUpon>frm_All_Recipient_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Hospital_Bill_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Hospital_Bill_List.Designer.cs">
+      <DependentUpon>frm_Hospital_Bill_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Single_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Single_Report.Designer.cs">
+      <DependentUpon>frm_Single_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Update_Donor_Blood_Quantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Update_Donor_Blood_Quantity.Designer.cs">
+      <DependentUpon>frm_Update_Donor_Blood_Quantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Hospital_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Hospital_Bill.Designer.cs">
+      <DependentUpon>frm_Hospital_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Increase_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Increase_Stock.Designer.cs">
+      <DependentUpon>frm_Increase_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Update_Recipient_Blood_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Update_Recipient_Blood_Stock.Designer.cs">
+      <DependentUpon>frm_Update_Recipient_Blood_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Search_Donor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Search_Donor.Designer.cs">
+      <DependentUpon>frm_Search_Donor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Search_Recipient_BG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Search_Recipient_BG.Designer.cs">
+      <DependentUpon>frm_Search_Recipient_BG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Stock_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Stock_Details.Designer.cs">
+      <DependentUpon>frm_Stock_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Stock_Price.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Stock_Price.Designer.cs">
+      <DependentUpon>frm_Stock_Price.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Update_Donor_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Update_Donor_Details.Designer.cs">
+      <DependentUpon>frm_Update_Donor_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Update_Recipient_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Update_Recipient_Details.Designer.cs">
+      <DependentUpon>frm_Update_Recipient_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global_Vars.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frm_Datewise_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Datewise_Report.Designer.cs">
+      <DependentUpon>frm_Datewise_Report.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrystalReports\crpt_Donor_Datewise_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpt_Donor_Datewise_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\crpt_Hospital_Datewise_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpt_Hospital_Datewise_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\crpt_hospital_single_bill_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpt_hospital_single_bill_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\crpt_Recipient_Datewise_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpt_Recipient_Datewise_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\crpt_Recipient_single_id_bill_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpt_Recipient_single_id_bill_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.aa.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Add_New_Donor.resx">
+      <DependentUpon>frm_Add_New_Donor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Add_New_Hospital.resx">
+      <DependentUpon>frm_Add_New_Hospital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Add_New_Recipient.resx">
+      <DependentUpon>frm_Add_New_Recipient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_All_Donor_List.resx">
+      <DependentUpon>frm_All_Donor_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_All_Hospital_List.resx">
+      <DependentUpon>frm_All_Hospital_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_All_Recipient_List.resx">
+      <DependentUpon>frm_All_Recipient_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Hospital_Bill_List.resx">
+      <DependentUpon>frm_Hospital_Bill_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Single_Report.resx">
+      <DependentUpon>frm_Single_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_splash_form.resx">
+      <DependentUpon>frm_splash_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Update_Donor_Blood_Quantity.resx">
+      <DependentUpon>frm_Update_Donor_Blood_Quantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Hospital_Bill.resx">
+      <DependentUpon>frm_Hospital_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Increase_Stock.resx">
+      <DependentUpon>frm_Increase_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Update_Recipient_Blood_Stock.resx">
+      <DependentUpon>frm_Update_Recipient_Blood_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Search_Donor.resx">
+      <DependentUpon>frm_Search_Donor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Search_Recipient_BG.resx">
+      <DependentUpon>frm_Search_Recipient_BG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Stock_Details.resx">
+      <DependentUpon>frm_Stock_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Stock_Price.resx">
+      <DependentUpon>frm_Stock_Price.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Update_Donor_Details.resx">
+      <DependentUpon>frm_Update_Donor_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Update_Recipient_Details.resx">
+      <DependentUpon>frm_Update_Recipient_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frm_Datewise_Report.resx">
+      <DependentUpon>frm_Datewise_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Blood_Bank_Management_System_DBDataSet11.xsc">
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Blood_Bank_Management_System_DBDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet11.xss">
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet21.xsc">
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Blood_Bank_Management_System_DBDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet21.xss">
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet3.xsc">
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Blood_Bank_Management_System_DBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet3.xss">
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet4.xsc">
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Blood_Bank_Management_System_DBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet4.xss">
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet5.xsc">
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Blood_Bank_Management_System_DBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Blood_Bank_Management_System_DBDataSet5.xss">
+      <DependentUpon>Blood_Bank_Management_System_DBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Report_Datasets\ds_donor_list.xsc">
+      <DependentUpon>ds_donor_list.xsd</DependentUpon>
+    </None>
+    <None Include="Report_Datasets\ds_donor_list.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_donor_list.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report_Datasets\ds_donor_list.xss">
+      <DependentUpon>ds_donor_list.xsd</DependentUpon>
+    </None>
+    <None Include="Report_Datasets\ds_hospital_List.xsc">
+      <DependentUpon>ds_hospital_List.xsd</DependentUpon>
+    </None>
+    <None Include="Report_Datasets\ds_hospital_List.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_hospital_List.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report_Datasets\ds_hospital_List.xss">
+      <DependentUpon>ds_hospital_List.xsd</DependentUpon>
+    </None>
+    <None Include="Report_Datasets\ds_Hospital_single_bill.xsc">
+      <DependentUpon>ds_Hospital_single_bill.xsd</DependentUpon>
+    </None>
+    <None Include="Report_Datasets\ds_Hospital_single_bill.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Hospital_single_bill.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report_Datasets\ds_Hospital_single_bill.xss">
+      <DependentUpon>ds_Hospital_single_bill.xsd</DependentUpon>
+    </None>
+    <None Include="Report_Datasets\ds_Recipient_List.xsc">
+      <DependentUpon>ds_Recipient_List.xsd</DependentUpon>
+    </None>
+    <None Include="Report_Datasets\ds_Recipient_List.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Recipient_List.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report_Datasets\ds_Recipient_List.xss">
+      <DependentUpon>ds_Recipient_List.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
