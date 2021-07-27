@@ -80,7 +80,7 @@ namespace Blood_Bank_Management_System
                 {
                     tb_Name.Text = obj.GetString(obj.GetOrdinal("Name"));
                     cmb_Blood_Group.Text = obj.GetString(obj.GetOrdinal("Blood_Group"));
-                    dtp_Date.Text = (obj["Date"].ToString());
+                    //dtp_Date.Text = (obj["Date"].ToString());
                     tb_Blood_Donated.Text = (obj["Blood_Donated"].ToString());
                 }
                 else
@@ -102,7 +102,7 @@ namespace Blood_Bank_Management_System
             Con_Open();
             if (tb_Blood_Donated.Text != "" && cmb_Blood_Group.Text != "")
             {
-                SqlCommand cmd = new SqlCommand("Update Donor_Details Set Blood_Donated = " + tb_Blood_Donated.Text + " ", Con);
+                SqlCommand cmd = new SqlCommand("Update Donor_Details Set Blood_Donated = " + tb_Blood_Donated.Text + ", Date = '" + dtp_Date.Text + "' where Donor_ID = " + tb_Donor_ID.Text + " ", Con);
                 cmd.ExecuteNonQuery();
                 SqlCommand Cmd = new SqlCommand("Update Stock_Details Set Units= Units+ " + tb_Blood_Donated.Text + " where Blood_Group = '" + cmb_Blood_Group.Text + "' ", Con);
                 Cmd.ExecuteNonQuery();

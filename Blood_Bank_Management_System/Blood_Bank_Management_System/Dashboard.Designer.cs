@@ -77,6 +77,7 @@
             this.lbl_Title = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.donorCertificateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.xuiGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -360,7 +361,8 @@
             // 
             this.singleReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.recipientToolStripMenuItem2,
-            this.hospitalToolStripMenuItem2});
+            this.hospitalToolStripMenuItem2,
+            this.donorCertificateToolStripMenuItem});
             resources.ApplyResources(this.singleReportToolStripMenuItem, "singleReportToolStripMenuItem");
             this.singleReportToolStripMenuItem.Name = "singleReportToolStripMenuItem";
             // 
@@ -422,6 +424,12 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
+            // donorCertificateToolStripMenuItem
+            // 
+            resources.ApplyResources(this.donorCertificateToolStripMenuItem, "donorCertificateToolStripMenuItem");
+            this.donorCertificateToolStripMenuItem.Name = "donorCertificateToolStripMenuItem";
+            this.donorCertificateToolStripMenuItem.Click += new System.EventHandler(this.donorCertificateToolStripMenuItem_Click);
+            // 
             // Dashboard
             // 
             resources.ApplyResources(this, "$this");
@@ -434,7 +442,7 @@
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.xuiClock1);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "Dashboard";
             this.Opacity = 0D;
@@ -499,5 +507,6 @@
         private System.Windows.Forms.ToolStripMenuItem singleReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recipientToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem hospitalToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem donorCertificateToolStripMenuItem;
     }
 }

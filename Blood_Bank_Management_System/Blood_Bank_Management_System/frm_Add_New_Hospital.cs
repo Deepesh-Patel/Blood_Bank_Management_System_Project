@@ -110,7 +110,7 @@ namespace Blood_Bank_Management_System
 
         private void Only_Char_Special_character(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsLetter(e.KeyChar) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space) || (e.KeyChar == (char)Keys.ShiftKey) || (e.KeyChar == (char)Keys.CapsLock) || (e.KeyChar == ',')))
+            if (!(Char.IsLetter(e.KeyChar) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space) || (e.KeyChar == (char)Keys.ShiftKey) || (e.KeyChar == (char)Keys.CapsLock) || (e.KeyChar == ',') || (e.KeyChar == '.')))
             {
                 e.Handled = true;
             }

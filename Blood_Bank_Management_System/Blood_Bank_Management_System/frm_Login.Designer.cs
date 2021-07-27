@@ -867,12 +867,13 @@
             this.Controls.Add(this.btn_Sign_up);
             this.Controls.Add(this.btn_Login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "frm_Login";
             this.Opacity = 0D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login form";
+            this.Text = "Blood Bank Management System";
             this.Load += new System.EventHandler(this.frm_Login_Load);
             this.pnl_Login.ResumeLayout(false);
             this.pnl_Login.PerformLayout();

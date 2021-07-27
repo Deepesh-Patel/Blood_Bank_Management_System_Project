@@ -312,6 +312,7 @@
             this.tb_Age.Name = "tb_Age";
             this.tb_Age.Size = new System.Drawing.Size(451, 29);
             this.tb_Age.TabIndex = 72;
+            this.tb_Age.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // lbl_Age
             // 
@@ -384,6 +385,7 @@
             this.tb_Email.Name = "tb_Email";
             this.tb_Email.Size = new System.Drawing.Size(451, 29);
             this.tb_Email.TabIndex = 5;
+            this.tb_Email.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char_Numeric);
             // 
             // lbl_Email
             // 
@@ -405,6 +407,7 @@
             this.tb_Aadhar_Card.Name = "tb_Aadhar_Card";
             this.tb_Aadhar_Card.Size = new System.Drawing.Size(451, 29);
             this.tb_Aadhar_Card.TabIndex = 4;
+            this.tb_Aadhar_Card.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // tb_Mob_No
             // 
@@ -415,6 +418,7 @@
             this.tb_Mob_No.Name = "tb_Mob_No";
             this.tb_Mob_No.Size = new System.Drawing.Size(451, 29);
             this.tb_Mob_No.TabIndex = 3;
+            this.tb_Mob_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // tb_Name
             // 
@@ -425,6 +429,7 @@
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(451, 29);
             this.tb_Name.TabIndex = 70;
+            this.tb_Name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char);
             // 
             // lbl_Disease
             // 
@@ -588,6 +593,7 @@
             this.tb_Weight.Name = "tb_Weight";
             this.tb_Weight.Size = new System.Drawing.Size(354, 29);
             this.tb_Weight.TabIndex = 6;
+            this.tb_Weight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // btn_Previous
             // 
@@ -638,6 +644,7 @@
             this.tb_Blood_Donated.Size = new System.Drawing.Size(354, 29);
             this.tb_Blood_Donated.TabIndex = 95;
             this.tb_Blood_Donated.Visible = false;
+            this.tb_Blood_Donated.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // lbl_Blood_Quantity
             // 
@@ -661,6 +668,7 @@
             this.rtb_Address.Size = new System.Drawing.Size(451, 93);
             this.rtb_Address.TabIndex = 8;
             this.rtb_Address.Text = "";
+            this.rtb_Address.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char_Numeric);
             // 
             // tb_City
             // 
@@ -671,6 +679,7 @@
             this.tb_City.Name = "tb_City";
             this.tb_City.Size = new System.Drawing.Size(354, 29);
             this.tb_City.TabIndex = 7;
+            this.tb_City.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char);
             // 
             // lbl_Address
             // 

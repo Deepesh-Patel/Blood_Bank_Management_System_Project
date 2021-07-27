@@ -244,6 +244,13 @@ namespace Blood_Bank_Management_System
             ob.Show();
         }
 
+        private void donorCertificateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Single_Report obj = new frm_Single_Report();
+            Global_Vars.Ushow = 12;
+            obj.Show();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (Opacity == 1)

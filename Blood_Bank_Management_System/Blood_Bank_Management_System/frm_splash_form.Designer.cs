@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_splash_form));
             this.xuiGradientPanel1 = new XanderUI.XUIGradientPanel();
+            this.lbl_per = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Header = new System.Windows.Forms.Label();
             this.lbl_note = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.lbl_per = new System.Windows.Forms.Label();
             this.xuiGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Header)).BeginInit();
@@ -63,6 +63,18 @@
             this.xuiGradientPanel1.TabIndex = 0;
             this.xuiGradientPanel1.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.xuiGradientPanel1.TopRight = System.Drawing.Color.Fuchsia;
+            // 
+            // lbl_per
+            // 
+            this.lbl_per.AutoSize = true;
+            this.lbl_per.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_per.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_per.ForeColor = System.Drawing.Color.Maroon;
+            this.lbl_per.Location = new System.Drawing.Point(555, 440);
+            this.lbl_per.Name = "lbl_per";
+            this.lbl_per.Size = new System.Drawing.Size(20, 22);
+            this.lbl_per.TabIndex = 7;
+            this.lbl_per.Text = "0";
             // 
             // panel1
             // 
@@ -133,18 +145,6 @@
             this.timer3.Interval = 50;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // lbl_per
-            // 
-            this.lbl_per.AutoSize = true;
-            this.lbl_per.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_per.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_per.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_per.Location = new System.Drawing.Point(555, 440);
-            this.lbl_per.Name = "lbl_per";
-            this.lbl_per.Size = new System.Drawing.Size(20, 22);
-            this.lbl_per.TabIndex = 7;
-            this.lbl_per.Text = "0";
-            // 
             // frm_splash_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -154,6 +154,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.xuiGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_splash_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.xuiGradientPanel1.ResumeLayout(false);

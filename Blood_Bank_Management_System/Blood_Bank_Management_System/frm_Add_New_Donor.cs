@@ -85,7 +85,7 @@ namespace Blood_Bank_Management_System
 
         private void Only_Char_Numeric(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsLetter(e.KeyChar) || (Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space) || (e.KeyChar == (char)Keys.ShiftKey) || (e.KeyChar == '.') || (e.KeyChar == '@'))))
+            if (!(Char.IsLetter(e.KeyChar) || (Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space) || (e.KeyChar == (char)Keys.ShiftKey) || (e.KeyChar == '.') || (e.KeyChar == '@') || (e.KeyChar == ','))))
             {
                 e.Handled = true;
             }
@@ -157,6 +157,7 @@ namespace Blood_Bank_Management_System
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Record Saved! Thankyou "+tb_Name.Text+" for registering for Blood Donation.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Clear_Controls();
+                tbp_Add_Donor.SelectTab(tbp_Donor_Details);
                 tb_Name.Focus();                
             }
             else
@@ -192,14 +193,15 @@ namespace Blood_Bank_Management_System
 
             decimal Age;
             Age = Convert.ToDecimal(tb_Age.Text);
+
             if (Age < 18)
             {
-                MessageBox.Show("Age should be minimum of 18 yrs", "Age", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Age should be minimum of 18 yrs", "Not Applicable", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tb_Age.Clear();
             }
             else if (Age > 60)
             {
-                MessageBox.Show("Age should be maximum of 60 yrs", "Age", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Age should be maximum of 60 yrs", "Not Applicable", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tb_Age.Clear();
             }
         }

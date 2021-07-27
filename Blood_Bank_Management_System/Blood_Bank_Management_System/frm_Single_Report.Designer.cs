@@ -35,6 +35,7 @@
             this.tb_ID = new System.Windows.Forms.TextBox();
             this.btn_Hospital_Report_Show = new System.Windows.Forms.Button();
             this.btn_Show_Report = new System.Windows.Forms.Button();
+            this.btn_Donor_Report_Show = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,12 +120,31 @@
             this.btn_Show_Report.Visible = false;
             this.btn_Show_Report.Click += new System.EventHandler(this.btn_Show_Report_Click);
             // 
+            // btn_Donor_Report_Show
+            // 
+            this.btn_Donor_Report_Show.BackColor = System.Drawing.Color.Cornsilk;
+            this.btn_Donor_Report_Show.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_Donor_Report_Show.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Donor_Report_Show.Font = new System.Drawing.Font("Modern No. 20", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Donor_Report_Show.Image = ((System.Drawing.Image)(resources.GetObject("btn_Donor_Report_Show.Image")));
+            this.btn_Donor_Report_Show.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Donor_Report_Show.Location = new System.Drawing.Point(949, 35);
+            this.btn_Donor_Report_Show.Name = "btn_Donor_Report_Show";
+            this.btn_Donor_Report_Show.Size = new System.Drawing.Size(206, 44);
+            this.btn_Donor_Report_Show.TabIndex = 92;
+            this.btn_Donor_Report_Show.Text = "Show Report";
+            this.btn_Donor_Report_Show.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Donor_Report_Show.UseVisualStyleBackColor = false;
+            this.btn_Donor_Report_Show.Visible = false;
+            this.btn_Donor_Report_Show.Click += new System.EventHandler(this.btn_Donor_Report_Show_Click);
+            // 
             // frm_Single_Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(1527, 789);
+            this.Controls.Add(this.btn_Donor_Report_Show);
             this.Controls.Add(this.btn_Show_Report);
             this.Controls.Add(this.btn_Hospital_Report_Show);
             this.Controls.Add(this.tb_ID);
@@ -148,6 +168,7 @@
         private System.Windows.Forms.TextBox tb_ID;
         private System.Windows.Forms.Button btn_Hospital_Report_Show;
         private System.Windows.Forms.Button btn_Show_Report;
+        private System.Windows.Forms.Button btn_Donor_Report_Show;
 
     }
 }

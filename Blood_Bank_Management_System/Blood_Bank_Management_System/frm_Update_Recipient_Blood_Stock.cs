@@ -83,7 +83,7 @@ namespace Blood_Bank_Management_System
                 if (obj.Read())
                 {
                     tb_Name.Text = obj.GetString(obj.GetOrdinal("Name"));
-                    dtp_Date.Text = (obj["Date"].ToString());
+                    //dtp_Date.Text = (obj["Date"].ToString());
                     cmb_Blood_Group.Text = obj.GetString(obj.GetOrdinal("Blood_Group"));
                     //tb_Blood_Required.Text = (obj["Blood_Required"].ToString());
                     //tb_Price.Text = (obj["Price"].ToString());

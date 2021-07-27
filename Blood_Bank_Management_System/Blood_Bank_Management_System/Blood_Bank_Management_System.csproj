@@ -84,6 +84,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Blood_Bank_Management_System_DBDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReports\crpt_donor_certificate_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpt_donor_certificate_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReports\crpt_Donor_Datewise_Report.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -269,6 +275,10 @@
     <Compile Include="frm_Datewise_Report.Designer.cs">
       <DependentUpon>frm_Datewise_Report.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CrystalReports\crpt_donor_certificate_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpt_donor_certificate_report.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReports\crpt_Donor_Datewise_Report.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpt_Donor_Datewise_Report.cs</LastGenOutput>

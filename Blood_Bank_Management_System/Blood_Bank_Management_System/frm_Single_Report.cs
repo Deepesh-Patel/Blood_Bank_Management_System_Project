@@ -48,6 +48,11 @@ namespace Blood_Bank_Management_System
                 btn_Hospital_Report_Show.Visible = true;
                 lbl_ID.Text = "Hospital ID";
             }
+            else if (Global_Vars.Ushow == 12)
+            {
+                btn_Donor_Report_Show.Visible = true;
+                lbl_ID.Text = "Donor ID";
+            }
         }
 
         private void btn_Hospital_Report_Show_Click(object sender, EventArgs e)
@@ -96,6 +101,31 @@ namespace Blood_Bank_Management_System
                 cpr.Database.Tables["Recipient_List"].SetDataSource(dt);
 
                 this.crv_single_view.ReportSource = cpr;
+            }
+            else
+            {
+                MessageBox.Show("Please Type ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            Con_Close();
+        }
+
+        private void btn_Donor_Report_Show_Click(object sender, EventArgs e)
+        {
+            Con_Open();
+
+            DataTable dt = new DataTable();
+
+            if (tb_ID.Text != "")
+            {
+                SqlCommand cmd = new SqlCommand("Select * from Donor_Details where Donor_ID = " + tb_ID.Text + " ", Con);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                sda.Fill(dt);
+
+                CrystalReports.crpt_donor_certificate_report cpd = new CrystalReports.crpt_donor_certificate_report();
+                cpd.Database.Tables["Donor_Details"].SetDataSource(dt);
+
+                this.crv_single_view.ReportSource = cpd;
             }
             else
             {
